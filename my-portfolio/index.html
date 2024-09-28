@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darlinton Oyakhilome Iribhogbe - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>DARLINGTON OYAKHILOME IRIBHOGBE</h1>
+        <hr size="10">
+        <h1>Welcome to My Portfolio!</h1>
+        <p>Hi, I’m Darlington, an aspiring web developer passionate about creating beautiful and functional websites. Join me on my journey as I learn and grow in the world of web development.</p>
+        <button id="menu-toggle">Toggle Menu</button>
+    </header>
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <section id="about">
+            <h2>About Me</h2>
+            <img src="images/A5-F92-E14-96-EF-4-B35-B31-C-18-C1-D06-B0-E6-A.jpg" alt="Me" style="max-width: 200px; border-radius: 10px; margin-bottom: 20px;">
+            <p>I'm currently a Mechatronics Engineering student and a self-taught developer, based in Nigeria. My interest in web development began when I hopped on a coding class in Udemy by Angela Yu. I'm excited to learn and explore the vast possibilities that the web has to offer.</p>
+        </section>
+        
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML5 <div class="progress" data-skill="90"></div></li>
+            <li>CSS3 <div class="progress" data-skill="80"></div></li>
+            <li>JavaScript <div class="progress" data-skill="70"></div></li>
+            <li>Bootstrap <div class="progress" data-skill="60"></div></li>
+        </ul>
+    </section>
+
+    <section id="resources">
+        <h2>Favorite Resources</h2>
+        <ul>
+            <li><a href="https://www.freecodecamp.org/">FreeCodeCamp</a> - A fantastic platform for learning web development.</li>
+            <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a> - Comprehensive documentation for web technologies.</li>
+            <li><a href="https://www.w3schools.com/">W3Schools</a> - Great for quick tutorials and references.</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>I'd love to connect! Feel free to reach out through any of the platforms below:</p>
+        <ul>
+            <li>Email: sylvesterdarlington@gmail.com</li>
+            <li><a href="https://www.linkedin.com/in/darlington-iribhogbe">LinkedIn</a></li>
+            <li><a href="https://twitter.com/darl_denzel">Twitter</a></li>
+            <li><a href="https://www.instagram.com/darl_denzel">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@darlington_iribhogbe">Tiktok</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> DARLINGTON</p>
+    </footer>
+
+    <script>
+        // Smooth scroll functionality
+        const links = document.querySelectorAll('nav a');
+        links.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Update the year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Skills progress bars
+        const progressBars = document.querySelectorAll('.progress');
+        progressBars.forEach(bar => {
+            const skillLevel = bar.getAttribute('data-skill');
+            bar.style.width = skillLevel + '%';
+            bar.style.height = '10px';
+            bar.style.backgroundColor = '#4CAF50';
+            bar.style.borderRadius = '5px';
+            bar.style.marginTop = '5px';
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbar = document.getElementById('navbar');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

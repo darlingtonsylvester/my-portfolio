@@ -1,0 +1,103 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+header {
+    background: #5f3fb6; /* Blue background */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background: #fff;
+    margin: 20px auto;
+    width: 80%; /* Responsive width */
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    border-bottom: 2px solid #aa1616; /* Underline */
+    padding-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* Link Styles */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #45a049; /* Darker green on hover */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Progress Bar Styles */
+.progress {
+    background: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* Mobile Menu Styles */
+#navbar {
+    display: none; /* Hide navbar initially */
+}
+
+#navbar.active {
+    display: block; /* Show navbar when active */
+}
+
+button {
+    margin: 10px 0;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+img {
+    max-width: 100%; /* Make the image responsive */
+    height: auto;    /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below the image */
+}
